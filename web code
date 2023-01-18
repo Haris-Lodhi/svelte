@@ -1,0 +1,140 @@
+        <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Webshop</title>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    
+        body {
+            margin-left: 10px;
+        }
+    
+        button {
+            margin: 10px;
+        }
+    
+        table {
+            float: left;
+            width: 40%;
+        }
+    
+        p {
+            padding: 5px;
+            padding-left: 20px;
+        }
+    
+        #shoppingCartDiv {
+            border: 1px solid black;
+            position: absolute;
+            left: 780px;
+            width: 50%;
+            height: 98%;
+            margin: 5px;
+        }
+    </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>Product 1</td>
+                <td>&euro; 15</td>
+                <td><button id="button1" type="button" onClick="addToCart(this.id);">Add to cart</button></td>
+            </tr>
+            <tr>
+                <td>Product 2</td>
+                <td>&euro; 30</td>
+                <td><button id="button2" type="button" onClick="addToCart(this.id);">Add to cart</button></td>
+            </tr>
+            <tr>
+                <td>Product 3</td>
+                <td>&euro; 45</td>
+                <td><button id="button3" type="button" onClick="addToCart(this.id);">Add to cart</button></td>
+            </tr>
+            <tr>
+                <td>Product 4</td>
+                <td>&euro; 60</td>
+                <td><button id="button4" type="button" onClick="addToCart(this.id);">Add to cart</button></td>
+            </tr>
+            <tr>
+                <td>Product 5</td>
+                <td>&euro; 75</td>
+                <td><button id="button5" type="button" onClick="addToCart(this.id);">Add to cart</button></td>
+            </tr>
+        </table>
+    
+        <div id="shoppingCartDiv">
+            <p id="shoppingCartP">
+            </p>
+        </div>
+    <script>
+    window.onload=function()
+    {
+     document.getElementById("shoppingCartP").innerHTML = "Your shopping cart is empty";
+    }
+        var shoppingCart;
+        function addToCart(id) {
+            var id=id;
+       shoppingCartP=document.getElementById("shoppingCartP").innerHTML;
+            switch (id) {
+                case "button1" :
+                    if (shoppingCartP == "Your shopping cart is empty") {
+                        shoppingCart = "Product 1" + "<br>"
+                    } 
+        else if (shoppingCartP.indexOf("Product 1")>-1){
+        }
+        else {
+                        (shoppingCart= shoppingCartP + "Product 1" + "<br>")
+                        }
+         break;
+          case "button2":
+                    if (shoppingCartP == "Your shopping cart is empty") {
+                        shoppingCart= "Product 2" + "<br />"
+                    }
+        else if (shoppingCartP.indexOf("Product 2")>-1){
+        }
+        else {
+                        (shoppingCart = shoppingCartP + "Product 2" + "<br />")
+                        }
+         break;
+          case "button3":
+                    if (shoppingCartP == "Your shopping cart is empty") {
+                        shoppingCart = "Product 3" + "<br />"
+                    } 
+        else if (shoppingCartP.indexOf("Product 3")>-1){
+        }
+        else {
+                        (shoppingCart = shoppingCartP + "Product 3" + "<br />")
+                        }
+         break;
+          case "button4":
+                    if (shoppingCartP == "Your shopping cart is empty") {
+                        shoppingCart = "Product 4" + "<br />"
+                    } 
+        else if (shoppingCartP.indexOf("Product 4")>-1){
+        }
+        else {
+                        (shoppingCart = shoppingCartP + "Product 4" + "<br />")
+                        }
+         break;
+          case "button5":
+                    if (shoppingCartP == "Your shopping cart is empty") {
+                        shoppingCart = "Product 5" + "<br />"
+                    } 
+        else if (shoppingCartP.indexOf("Product 5")>-1){
+        }
+        else {
+                        (shoppingCart = shoppingCartP + "Product 5" + "<br />")
+                        }
+         break;
+            }
+    
+            document.getElementById("shoppingCartP").innerHTML = shoppingCart;
+        }
+    </script>
+    </body>
+    </html>​
